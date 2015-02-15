@@ -42,8 +42,8 @@ public class RobotMap {
     public static DigitalInput toteInRobot;
     public static DigitalInput lotOfTotes;
     public static Encoder liftEncoder;
-    public static Encoder backLiftEncoder;
-    public static Encoder frontLiftEncoder;
+    public static Encoder backLeftEncoder;
+    public static Encoder backRightEncoder;
     
     
     public static void init() {
@@ -94,10 +94,10 @@ public class RobotMap {
         
         liftEncoder = new Encoder(6,7);
         LiveWindow.addSensor("Lift", "Lift Encoder", liftEncoder);
-        backLiftEncoder = new Encoder(2,3);
-        LiveWindow.addSensor("Lift", "Back Lift Encoder", backLiftEncoder);
-        frontLiftEncoder = new Encoder(0,1);
-        LiveWindow.addSensor("Lift", "Back Lift Encoder", backLiftEncoder);
+        backLeftEncoder = new Encoder(2,3);
+        LiveWindow.addSensor("Lift", "Back Left Encoder", backLeftEncoder);
+        backRightEncoder = new Encoder(0,1);
+        LiveWindow.addSensor("Lift", "Back Right Encoder", backRightEncoder);
         
         
         

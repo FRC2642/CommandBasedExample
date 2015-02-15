@@ -1,5 +1,5 @@
 
-package org.usfirst.frc2642.myRobot.commands;
+package org.usfirst.frc2642.myRobot.commands.Lift;
 
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc2642.myRobot.Robot;
@@ -21,7 +21,9 @@ public class LiftOverride extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	
+    	if (button1 == true) {
+    		Robot.Lift.moveLift(0.5);
+    	}
     }
 
     // Make this return true when this Command no longer needs to run execute()

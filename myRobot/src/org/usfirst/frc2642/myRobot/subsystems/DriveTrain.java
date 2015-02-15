@@ -13,6 +13,7 @@ package org.usfirst.frc2642.myRobot.subsystems;
 
 import org.usfirst.frc2642.myRobot.RobotMap;
 import org.usfirst.frc2642.myRobot.commands.*;
+import org.usfirst.frc2642.myRobot.commands.DriveTrain.MecanumDefault;
 
 import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -28,6 +29,8 @@ public class DriveTrain extends Subsystem {
     SpeedController rearLeftMotor = RobotMap.driveTrainRearLeftMotor;
     SpeedController frontRightMotor = RobotMap.driveTrainFrontRightMotor;
     SpeedController rearRightMotor = RobotMap.driveTrainRearRightMotor;
+    Encoder leftEncoder = RobotMap.backLeftEncoder;
+    Encoder rightEncoder = RobotMap.backRightEncoder;
     RobotDrive robotDrive = RobotMap.driveTrainrobotDrive;
     Accelerometer accel = RobotMap.accel;
     Gyro gyro = RobotMap.gyro;

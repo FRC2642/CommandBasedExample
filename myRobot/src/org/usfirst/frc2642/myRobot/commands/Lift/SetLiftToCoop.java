@@ -1,4 +1,4 @@
-package org.usfirst.frc2642.myRobot.commands;
+package org.usfirst.frc2642.myRobot.commands.Lift;
 
 import org.usfirst.frc2642.myRobot.Robot;
 import org.usfirst.frc2642.myRobot.RobotMap;
