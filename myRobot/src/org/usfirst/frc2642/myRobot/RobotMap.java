@@ -16,7 +16,7 @@ import edu.wpi.first.wpilibj.interfaces.Accelerometer;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.livewindow.LiveWindowSendable;
 
-import java.util.Vector;
+import java.util.*;
 
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
@@ -44,6 +44,14 @@ public class RobotMap {
     public static Encoder liftEncoder;
     public static Encoder backLeftEncoder;
     public static Encoder backRightEncoder;
+    
+    public static Compressor compressor;
+    public static Solenoid dogs;
+    public static Solenoid pusher;
+    public static Solenoid flipper;
+    
+    public static Talon leftPicker;
+    public static Talon rightPicker;
     
     
     public static void init() {
@@ -98,6 +106,20 @@ public class RobotMap {
         LiveWindow.addSensor("Lift", "Back Left Encoder", backLeftEncoder);
         backRightEncoder = new Encoder(0,1);
         LiveWindow.addSensor("Lift", "Back Right Encoder", backRightEncoder);
+        
+        leftPicker = new Talon(5);
+        LiveWindow.addActuator("Pickers", "Left Picker", (Talon) leftPicker);
+        rightPicker = new Talon(6);
+        LiveWindow.addActuator("Pickers", "Right Picker", (Talon) rightPicker);
+        
+        compressor = new Compressor(0);
+        LiveWindow.addActuator("Lift", "Compressor", compressor);
+        dogs = new Solenoid(0);
+        LiveWindow.addActuator("Lift", "Dogs", dogs);
+        pusher = new Solenoid(1);
+        LiveWindow.addActuator("Lift", "Pusher", pusher);
+        flipper = new Solenoid(2);
+        LiveWindow.addActuator("Lift", "Flipper", flipper);
         
         
         
